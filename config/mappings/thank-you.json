@@ -1,0 +1,3 @@
+{
+  "Thank you message" : "//h2[contains(text(),'Thank you,')]"
+}

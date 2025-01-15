@@ -1,0 +1,12 @@
+{
+  "header logo" : "[class='Header-module__logoWrap__eUiiA']",
+  "Recommended Section" : "[class='recommended-products']",
+  "priceBeat" : "[class='PriceCheck-module__title__oArkM']",
+  "myStore" : "//h2[@class='ui-heading'][contains(text(),'Your store')]",
+  "product" : "[class='product-tile']",
+  "username" : "input[id='account_email']",
+  "continueWithEmail" : "button[type='submit']",
+  "password" : "input[id='account_password']",
+  "commit" : "button[name='commit']"
+
+}

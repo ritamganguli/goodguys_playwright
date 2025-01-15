@@ -1,0 +1,32 @@
+{
+  "name": "tggshopify-e2e-testautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "rimraf dist  && babel --extensions .ts --out-dir dist src",
+    "precucumber": "rimraf reports && mkdir reports && echo {} > reports/report.json",
+    "cucumber": "npm run transpile && cucumber-js",
+    "postcucumber": "ts-node ./src/reporter/cucumber-report.ts"
+  },
+  "author": "TGG",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-typescript": "^7.24.1",
+    "@cucumber/cucumber": "^10.6.0",
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.10",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.43.1",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "description": "",
+  "dependencies": {
+    "@babel/core": "^7.24.5",
+    "cucumber-html-reporter": "^7.1.1",
+    "playwright-core": "^1.44.0"
+  }
+}

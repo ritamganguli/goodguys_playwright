@@ -1,0 +1,20 @@
+{
+  "creditCard" : "input[id='basic-creditCards']",
+  "payPal" : "input[id='basic-PAYPAL_EXPRESS']",
+  "iFrameCreditCard" : "iframe[class='card-fields-iframe']",
+  "cardNumber" : "input[id='number']",
+  "nameOnCard" : "input[id='name']",
+  "expirationDate" : "input[id='expiry']",
+  "securityCode" : "input[id='verification_value']",
+  "firstName" : "input[name='firstName']",
+  "lastName" : "input[name='lastName']",
+  "address" : "input[id='billing-address1']",
+  "address2" : "input[name='address2']",
+  "city" : "input[name='city']",
+  "state" : "select[name='zone']",
+  "postCode" : "input[name='postalCode']",
+  "firstSuggestionAddress" : "ul[id='billing-address1-option']",
+  "placeYourOrderO" : "button[type='submit']",
+  "placeYourOrder" : "//span[contains(text(),'PLACE YOUR ORDER')]",
+  "sameAsShippingAddress" : "//span[contains(text(),'Same as shipping address')]"
+}

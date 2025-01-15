@@ -1,0 +1,16 @@
+{
+
+  "myCart" : "[id='topnav-brands']",
+  "shopByBrand" : "[id='shopByBrand']",
+  "userIcon" : "[id='myAcctId']",
+  "createAccount":"[id='btn_register']",
+  "search" : "[id='autocomplete-3-input']",
+  "searchButton" : "[class='aa-SubmitButton']",
+  "userName" : "[id='account_email']",
+  "ContinueWithEmail": "[text='Continue with email']",
+  "Password" : "[id='account_password']",
+  "submit" : "[name='commit']",
+  "shopProducts" : "[data-testid='menu-item-shop-products']",
+  "televisionButton" : "[data-testid='menu-item-televisions']",
+  "allTVs" : "[data-testid='menu-item-all-tvs']"
+}

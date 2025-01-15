@@ -1,0 +1,81 @@
+#---
+#version: "0.1"
+#globalTimeout: 90
+#testSuiteTimeout: 90
+#testSuiteStep: 90
+#runson: win
+#autosplit: true
+#retryOnFailure: false
+#maxRetries: 1
+#concurrency: 2
+#
+#pre:
+#  - npm install
+#  - npx playwright install
+#cacheKey: '{{ checksum "package-lock.json" }}'
+#cacheDirectories:
+#  - node_modules
+#testDiscovery:
+#  type: raw
+#  mode: dynamic
+#  command: echo dev
+##testDiscovery:
+##  type: automatic
+##  mode: static
+##  args:
+##    featureFilePaths: src/features
+##    frameWork: javascript
+#testRunnerCommand: ./run_tests.bat $test
+#captureScreenRecordingForScenarios: true
+#env:
+#  COMMON_CONFIG_FILE: env/common.env
+#  tag: dev
+#
+#jobLabel: [playwright-VanillaJS, win, autosplit]
+
+
+
+
+---
+version: "0.1"
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+runson: win11
+autosplit: true
+retryOnFailure: false
+maxRetries: 1
+concurrency: 15
+
+pre:
+  - npm install
+  - npx playwright install
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+testDiscovery:
+  type: automatic
+  mode: dynamic
+  args:
+    featureFilePaths: src/features
+    frameWork: javascript
+    specificTags: ["@dev"]
+testRunnerCommand: npm run cucumber -- --profile dev $test ; node reports.js
+env:
+  COMMON_CONFIG_FILE: env/common.env
+  tag: dev
+  browser: MicrosoftEdge
+  RUN_ON_LAMBDATEST: true
+
+jobLabel: [playwright-VanillaJS, win, autosplit,good_guys,firefox]
+
+report: true
+partialReports:
+  location: reports/
+  frameworkName: cucumber
+  type: json
+
+uploadArtifacts:
+  - name: Executed-Job-Artifacts #user defined name of the artifact
+    path:
+      -  reports/**

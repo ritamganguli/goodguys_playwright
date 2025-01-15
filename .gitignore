@@ -1,0 +1,6 @@
+.idea
+#### compile fils
+/dist
+/node_modules
+/reports
+/undefined

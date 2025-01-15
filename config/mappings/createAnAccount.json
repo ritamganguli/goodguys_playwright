@@ -1,0 +1,13 @@
+{
+  "title" : "[id='personal_info_title']",
+  "firstName" : "[id='regAddForm_firstName']",
+  "firstNameError" : "//*[@id='regAddForm_firstName_inner_div']/small",
+  "lastName" : "[id='regAddForm_lastName']",
+  "streetAddress" : "[id='regAddForm_qasaddress']",
+  "16 whitecaps Avenue" : "//*[@id='qasResultDiv']/div[1]",
+  "emailAddress" : "[id='regAddForm_email1']",
+  "phoneNumber" : "[id='regAddForm_mobileNum']",
+  "createPassword" : "[id='regAddForm_password']",
+  "reEnterPassword" : "[id='regAddForm_passwordNew']",
+  "register" : "[id='WC_UserRegistrationAddForm_links_1']"
+}

@@ -1,0 +1,7 @@
+{
+  "proceedToPayment" : "//span[contains(text(),'PROCEED TO PAYMENT')]",
+  "shippingMessage" : "//p[contains(@class,'_1x52f9s1 _1x52f9s0 _1fragemlj')]",
+  "shippingMessageText" : "//p[contains(text(),'Your order cannot be shipped to the selected address.')]",
+  "deliveryDate" : "//button[@id='DatePicker0-date-28']",
+  "newDeliveryDate" : "//button[@id='DatePicker0-date-30']"
+}

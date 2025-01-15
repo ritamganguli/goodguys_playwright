@@ -1,0 +1,141 @@
+{
+
+  "login" : {
+    "route" : "/login",
+    "regex" : "^/login$"
+  },
+
+  "home": {
+    "route" : "/lookup",
+    "regex": "^/lookup$"
+  },
+
+  "refreshHome" : {
+    "route" : "/",
+    "regex": "^/$"
+  },
+  "brand" : {
+    "route" : "/Brands",
+    "regex" : "^/Brands$"
+  },
+  "userCreationOrSignIn" : {
+    "route" : "/AjaxLogonForm?myAcctMain=1&catalogId=30000&langId=-1&storeId=900",
+    "regex" : "^/AjaxLogonForm?$"
+  },
+  "createAnAccount" : {
+    "route" : "/UserRegistrationForm?myAcctMain=1&new=Y&catalogId=30000&langId=-1&storeId=900",
+    "regex" : "^/UserRegistrationForm?$"
+  },
+  "searchResult" : {
+    "route" : "/search?q=50049388",
+    "regex" : "^/search$"
+  },
+  "productDisplay" : {
+    "route" : "/lg-10kg-6kg-combo-washer-dryer-wvc5-1410w",
+    "regex" : "^/lg-10kg-6kg-combo-washer-dryer-wvc5-1410w$"
+  },
+  "productDisplay2" : {
+    "route" : "/bose-smart-soundbar-900-863350-5110",
+    "regex" : "^/bose-smart-soundbar-900-863350-5110$"
+  },
+  "productDisplay3" : {
+    "route" : "/westinghouse-8kg-top-load-washer-wwt8084j7wa",
+    "regex" : "^/westinghouse-8kg-top-load-washer-wwt8084j7wa$"
+  },
+  "productDisplay4" : {
+    "route" : "/one-for-all-32-90inch-flat-100kg-tv-bracket-wm4611",
+    "regex" : "^/one-for-all-32-90inch-flat-100kg-tv-bracket-wm4611$"
+  },
+  "productDisplay5" : {
+    "route" : "/ninja-creami-ice-cream-maker-nc300",
+    "regex" : "^/ninja-creami-ice-cream-maker-nc300$"
+  },
+  "productDisplay6" : {
+    "route" : "/bonelk-car-charger-usb-a-24a-12w-blk-elk-22514-r",
+    "regex" : "^/bonelk-car-charger-usb-a-24a-12w-blk-elk-22514-r$"
+  },
+  "productDisplay7" : {
+    "route" : "/westinghouse-54cm-white-electric-freestanding-oven-wle543wcb",
+    "regex" : "^/westinghouse-54cm-white-electric-freestanding-oven-wle543wcb$"
+  },
+  "productDisplay8" : {
+    "route" : "/dyson-supersonic-hair-dryer-ironfuchsia-386738-01",
+    "regex" : "^/dyson-supersonic-hair-dryer-ironfuchsia-386738-01$"
+  },
+  "productDisplay9" : {
+    "route" : "/tefal-ultraglide-anti-calc-plus-fv5873",
+    "regex" : "^/tefal-ultraglide-anti-calc-plus-fv5873$"
+  },
+  "productDisplay11" : {
+    "route" : "/ninja-duo-1500w-blender-bl642nz",
+    "regex" : "^/ninja-duo-1500w-blender-bl642nz$"
+  },
+  "productDisplay12" : {
+    "route" : "/toshiba-55-inches-z670mp-4k-uhd-smart-tv-23-55z670mp",
+    "regex" : "^/toshiba-55-inches-z670mp-4k-uhd-smart-tv-23-55z670mp$"
+  },
+  "productDisplay13" : {
+    "route" : "/samsung-635l-side-by-side-refrigerator-srs673dmb",
+    "regex" : "^/samsung-635l-side-by-side-refrigerator-srs673dmb$"
+  },
+  "productDisplay14" : {
+    "route" : "/bosch-60cm-gas-cooktop-pph6a6b20a",
+    "regex" : "^/bosch-60cm-gas-cooktop-pph6a6b20a$"
+  },
+  "password" : {
+    "route" : "/password",
+    "regex" : "^/password$"
+  },
+  "checkout" : {
+    "route" : "/checkouts/cn/[A-Za-z0-9-]+/information",
+    "regex" : "^/checkouts/cn/[A-Za-z0-9-]+/information$"
+  },
+  "payment" : {
+    "route" : "/checkouts/cn/[A-Za-z0-9-]+/payment",
+    "regex" : "^/checkouts/cn/[A-Za-z0-9-]+/payment$"
+  },
+  "shipping" : {
+    "route" : "/checkouts/cn/[A-Za-z0-9-]+/shipping",
+    "regex" : "^/checkouts/cn/[A-Za-z0-9-]+/shipping$"
+  },
+  "thank-you" : {
+  "route" : "/checkouts/cn/[A-Za-z0-9-]+/thank-you",
+  "regex" : "^/checkouts/cn/[A-Za-z0-9-]+/thank-you$"
+},
+  "brandPage" : {
+    "route" : "/?refinementList%5Bvendor%5D%5B0%5D=Samsung&q=television",
+    "regex" : "^/?refinementList%5Bvendor%5D%5B0%5D=Samsung&q=television$"
+  },
+  "television" : {
+    "route" : "/televisions",
+    "regex" : "^/televisions$"
+  },
+  "selectedStore" : {
+    "route" : "/stores/maribyrnong",
+    "regex" : "^/stores/maribyrnong$"
+  },
+  "store" : {
+    "route" : "/stores",
+    "regex" : "^/stores$"
+  },
+  "boseBrand" : {
+    "route" : "/bose",
+    "regex" : "^/bose$"
+  },
+  "allTVs" : {
+    "route" : "/televisions/all-tvs",
+    "regex" : "^/televisions/all-tvs$"
+  },
+  "brandAcer" : {
+    "route" : "/acer",
+    "regex" : "^/acer$"
+  },
+  "brandHP" : {
+    "route" : "/hp",
+    "regex" : "^/hp"
+  },
+  "brandDyson" : {
+    "route" : "/dyson",
+    "regex" : "^/dyson"
+  }
+}

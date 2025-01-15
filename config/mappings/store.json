@@ -1,0 +1,9 @@
+{
+  "postCodeSearch" : "[data-testid='search-input']",
+  "postCodeSearchButton" : "//div[contains(@class,'_inputActions_1c90n_38')]",
+  "postCodeSearchResult" : "[data-testid='search-results']",
+  "firstSearchResult" : "[data-testid='search-result-item']",
+  "viewStoreDetails" : "//button[contains(text(),'Expand and view on map')]",
+  "setAsStore" : "[data-testid='set-as-your-store-button']",
+  "addNewID" :  "[data-testid='set-as-your-store-button']"
+}

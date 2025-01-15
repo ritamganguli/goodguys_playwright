@@ -1,0 +1,44 @@
+autosplit: true
+cacheDirectories:
+    - node_modules
+cacheKey: '{{ checksum "package-lock.json" }}'
+concurrency: 15
+env:
+    COMMON_CONFIG_FILE: env/common.env
+    RUN_ON_LAMBDATEST: true
+    browser: MicrosoftEdge
+    tag: dev
+globalTimeout: 90
+jobLabel:
+    - playwright-VanillaJS
+    - win
+    - autosplit
+    - good_guys
+    - firefox
+maxRetries: 1
+partialReports:
+    frameworkName: cucumber
+    location: reports/
+    type: json
+pre:
+    - npm install
+    - npx playwright install
+report: true
+retryOnFailure: false
+runson: win11
+testDiscovery:
+    args:
+        featureFilePaths: src/features
+        frameWork: javascript
+        specificTags:
+            - '@dev'
+    mode: dynamic
+    type: automatic
+testRunnerCommand: npm run cucumber -- --profile dev $test
+testSuiteStep: 90
+testSuiteTimeout: 90
+uploadArtifacts:
+    - name: Executed-Job-Artifacts
+      path:
+        - reports/**
+version: "0.1"

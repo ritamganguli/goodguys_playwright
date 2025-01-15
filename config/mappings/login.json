@@ -1,0 +1,10 @@
+{
+  "username" : "input[id='account_email']",
+  "continueWithEmail" : "button[type='submit']",
+  "password" : "input[id='account_password']",
+  "commit" : "button[name='commit']"
+
+
+
+
+}

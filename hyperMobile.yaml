@@ -1,0 +1,134 @@
+#---
+#version: 0.2
+#globalTimeout: 150
+#testSuiteTimeout: 150
+#testSuiteStep: 150
+#appium: true
+#framework:
+#  name: appium
+##runson: ios
+#runson: android
+#
+#
+#autosplit: true
+#retryOnFailure: true
+#
+#maxRetries: 1
+#concurrency: 5
+#
+#
+#
+## Dependency caching for Windows
+#cacheKey: '{{ checksum "package-lock.json" }}'
+#cacheDirectories:
+#  - node_modules
+#
+#pre:
+#  - npm install
+#  - npx playwright install
+#  - printenv
+#
+#
+##mergeArtifacts: true
+#
+#
+#testDiscovery:
+#  type: automatic
+#  mode: static
+#  args:
+#    featureFilePaths: src/features
+#    frameWork: javascript
+#    specificTags: ["@dev"]
+#
+#testRunnerCommand: npm run cucumber -- --profile dev $test
+#env:
+#  COMMON_CONFIG_FILE: env/common.env
+#  tag: dev
+#  browser: ${browser}
+#
+#jobLabel: [playwright-VanillaJS, android, autosplit,good_guys,firefox]
+#
+#report: true
+#partialReports:
+#  location: reports/
+#  frameworkName: cucumber
+#  type: json
+#
+#uploadArtifacts:
+#  - name: Executed-Job-Artifacts #user defined name of the artifact
+#    path:
+#      -  reports/**
+
+
+---
+version: 0.2
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+appium: true
+framework:
+  name: appium
+  args:
+    region: ap
+    isRealMobile: false
+    reservation: false
+    playwrightRD : true
+    mobileDC: true
+#runson: ios
+runson: android
+
+
+autosplit: true
+retryOnFailure: false
+
+#maxRetries: 1
+concurrency: 5
+
+
+
+# Dependency caching for Windows
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+
+pre:
+  - npm install
+  - npm install playwright@1.40 -g
+  - npm update playwright
+
+#mergeArtifacts: true
+
+
+testDiscovery:
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: src/features
+    frameWork: javascript
+    specificTags: ["@dev"]
+
+testRunnerCommand: npm run cucumber -- --profile dev $test
+env:
+  COMMON_CONFIG_FILE: env/common.env
+  tag: dev
+  IS_ANDROID: true
+
+
+
+
+jobLabel: [android, autosplit,good_guys,firefox]
+
+report: true
+partialReports:
+  location: reports/
+  frameworkName: cucumber
+  type: json
+
+uploadArtifacts:
+  - name: Executed-Job-Artifacts #user defined name of the artifact
+    path:
+      -  reports/**
+
+runtime:
+  language: node
+  version: "20"

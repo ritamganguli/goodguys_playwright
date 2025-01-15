@@ -1,0 +1,10 @@
+{
+  "storeHeader" : "[data-testid='header']",
+  "storeAddress" : "[data-testid='details-address']",
+  "getDirectionsLink" : "[data-testid='details-directions-link']",
+  "storeContact" : "[data-testid='store-contact']",
+  "tradingHours" : "//h2[contains(text(),'Trading Hours')]",
+  "tradingHoursTiming" : [ [ "data-testid='trading-hours-table'" ] ],
+  "breadcrumb" : "[data-testid='breadcrumb']",
+  "store" : "//a[contains(@href,'stores')]"
+}

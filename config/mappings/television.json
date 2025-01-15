@@ -1,0 +1,21 @@
+{
+  "televisionHeroBanner" : "[data-testid='dynamic-media-image']",
+  "televisionHeroBannerO" : "//a[contains(@href,'samsung')]",
+  "bentoGrid1" : "[data-testid='bentogrid-content-card-0-0']",
+  "bentoGrid2" : "[data-testid='bentogrid-content-card-1-0']",
+  "bentoGrid3" : "[data-testid='bentogrid-content-card-1-1']",
+  "bentoGrid4" : "[data-testid='bentogrid-content-card-2-0']",
+  "bentoGrid5" : "[data-testid='bentogrid-content-card-2-1']",
+  "bentoGrid6" : "[data-testid='bentogrid-content-card-3-0']",
+  "contentCard1" : "[data-testid='contentcardgrid-contentcard-0']",
+  "contentCard2" : "[data-testid='contentcardgrid-contentcard-1']",
+  "contentCard3" : "[data-testid='contentcardgrid-contentcard-2']",
+  "contentCard4" : "[data-testid='contentcardgrid-contentcard-3']",
+  "contentCard5" : "[data-testid='contentcardgrid-contentcard-4']",
+  "richContent" : "[data-testid='contentful-richtext']",
+  "buyingGuide" : "//h2[contains(text(),'TELEVISION BUYING GUIDE')]",
+  "modal" : "//span[contains(text(),'Modal')]",
+  "infoGuide" : "//span[contains(text(),'Info Guide')]",
+  "videoUploadTesting" : "//span[contains(text(),'video upload testing')]"
+
+}

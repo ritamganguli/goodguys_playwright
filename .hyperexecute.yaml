@@ -1,0 +1,347 @@
+version: "0.1"
+user: ashasingh
+key: rn0vEnokEIvNeBzIgUCTVDOXWhzQ3CvKr9eBDm8S9x7nPXIT0K
+testSuites: []
+pre: [npm install, npx playwright install, printenv]
+preDirectives:
+    commands: [npm install, npx playwright install, printenv]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+env:
+    COMMON_CONFIG_FILE: env/common.env
+    RUN_ON_LAMBDATEST: "true"
+    browser: MicrosoftEdge
+    tag: dev
+jobLabel:
+    - playwright-VanillaJS
+    - win
+    - autosplit
+    - good_guys
+    - firefox
+runson: win
+autosplit: true
+concurrency: 5
+testDiscovery:
+    args:
+        featureFilePaths: src/features
+        frameWork: javascript
+        specificTags:
+            - '@dev'
+    command: C:\Local\eComm-shopify-test-automation\.hyperexecute\snooper.exe  --targetOs=win --featureFilePaths=src/features --frameWork=javascript --specificTags=@dev
+    mode: static
+    type: automatic
+testDiscoveryResult:
+    - src/features/brand.feature:8
+    - src/features/brand.feature:23
+    - src/features/brand.feature:43
+    - src/features/brand.feature:64
+    - src/features/checkout-delivery.feature:62
+    - src/features/checkout-delivery.feature:95
+    - src/features/checkout-delivery.feature:128
+    - src/features/checkout-delivery.feature:146
+    - src/features/compareTool.feature:8
+    - src/features/compareTool.feature:21
+    - src/features/compareTool.feature:42
+    - src/features/compareTool.feature:54
+    - src/features/compareTool.feature:69
+    - src/features/compareTool.feature:81
+    - src/features/deliveryChoice.feature:8
+    - src/features/deliveryChoice.feature:24
+    - src/features/deliveryChoice.feature:39
+    - src/features/deliveryChoice.feature:54
+    - src/features/deliveryChoice.feature:74
+    - src/features/heroBanner_Television.feature:7
+    - src/features/heroBanner_Television.feature:20
+    - src/features/heroBanner_Television.feature:39
+    - src/features/homePageTest.feature:8
+    - src/features/homePageTest.feature:21
+    - src/features/homePageTest.feature:34
+    - src/features/homePageTest.feature:47
+    - src/features/homePageTest.feature:60
+    - src/features/homePageTest.feature:75
+    - src/features/homePageTest.feature:90
+    - src/features/homePageTest.feature:103
+    - src/features/homePageTest.feature:117
+    - src/features/homePageTest.feature:137
+    - src/features/homePageTest.feature:155
+    - src/features/homePageTest.feature:171
+    - src/features/minicart.feature:9
+    - src/features/minicart.feature:25
+    - src/features/myAccount.feature:8
+    - src/features/myAccount.feature:22
+    - src/features/myAccount.feature:37
+    - src/features/myAccount.feature:53
+    - src/features/myAccount.feature:70
+    - src/features/priceBeat.feature:9
+    - src/features/priceBeat.feature:26
+    - src/features/priceBeat.feature:44
+    - src/features/priceBeat.feature:61
+    - src/features/productDisplayPage.feature:9
+    - src/features/productDisplayPage.feature:20
+    - src/features/productDisplayPage.feature:33
+    - src/features/productDisplayPage.feature:47
+    - src/features/productDisplayPage.feature:58
+    - src/features/productDisplayPage.feature:70
+    - src/features/productDisplayPage.feature:83
+    - src/features/productDisplayPage.feature:97
+    - src/features/productDisplayPage.feature:111
+    - src/features/productDisplayPage.feature:124
+    - src/features/productDisplayPage.feature:138
+    - src/features/productListingPage.feature:10
+    - src/features/productListingPage.feature:26
+    - src/features/productListingPageFacets.feature:8
+    - src/features/productListingPageFacets.feature:57
+    - src/features/productListingPageFacets.feature:72
+    - src/features/productListingPageFacets.feature:88
+    - src/features/productListingPageSortOptions.feature:8
+    - src/features/productListingPageSortOptions.feature:25
+    - src/features/productListingPageSortOptions.feature:43
+    - src/features/productListingPageSortOptions.feature:61
+    - src/features/productListingPageSortOptions.feature:76
+    - src/features/productOverviewPDP.feature:9
+    - src/features/productOverviewPDP.feature:25
+    - src/features/productOverviewPDP.feature:37
+    - src/features/productOverviewPDP.feature:51
+    - src/features/productOverviewPDP.feature:68
+    - src/features/productOverviewPDP.feature:85
+    - src/features/reviewSectionPDP.feature:9
+    - src/features/reviewSectionPDP.feature:22
+    - src/features/reviewSectionPDP.feature:35
+    - src/features/reviewSectionPDP.feature:51
+    - src/features/reviewSectionPDP.feature:72
+    - src/features/reviewSectionPDP.feature:87
+    - src/features/search-product.feature:7
+    - src/features/search-product.feature:18
+    - src/features/search-product.feature:29
+    - src/features/stickyMenuPDP.feature:9
+    - src/features/stickyMenuPDP.feature:25
+    - src/features/stickyMenuPDP.feature:45
+    - src/features/storeAvailability.feature:9
+    - src/features/storeAvailability.feature:25
+    - src/features/storeAvailability.feature:46
+    - src/features/storeLocator.feature:7
+    - src/features/storeLocator.feature:33
+testDiscoveryResult2D:
+    - - src/features/brand.feature:8
+    - - src/features/brand.feature:23
+    - - src/features/brand.feature:43
+    - - src/features/brand.feature:64
+    - - src/features/checkout-delivery.feature:62
+    - - src/features/checkout-delivery.feature:95
+    - - src/features/checkout-delivery.feature:128
+    - - src/features/checkout-delivery.feature:146
+    - - src/features/compareTool.feature:8
+    - - src/features/compareTool.feature:21
+    - - src/features/compareTool.feature:42
+    - - src/features/compareTool.feature:54
+    - - src/features/compareTool.feature:69
+    - - src/features/compareTool.feature:81
+    - - src/features/deliveryChoice.feature:8
+    - - src/features/deliveryChoice.feature:24
+    - - src/features/deliveryChoice.feature:39
+    - - src/features/deliveryChoice.feature:54
+    - - src/features/deliveryChoice.feature:74
+    - - src/features/heroBanner_Television.feature:7
+    - - src/features/heroBanner_Television.feature:20
+    - - src/features/heroBanner_Television.feature:39
+    - - src/features/homePageTest.feature:8
+    - - src/features/homePageTest.feature:21
+    - - src/features/homePageTest.feature:34
+    - - src/features/homePageTest.feature:47
+    - - src/features/homePageTest.feature:60
+    - - src/features/homePageTest.feature:75
+    - - src/features/homePageTest.feature:90
+    - - src/features/homePageTest.feature:103
+    - - src/features/homePageTest.feature:117
+    - - src/features/homePageTest.feature:137
+    - - src/features/homePageTest.feature:155
+    - - src/features/homePageTest.feature:171
+    - - src/features/minicart.feature:9
+    - - src/features/minicart.feature:25
+    - - src/features/myAccount.feature:8
+    - - src/features/myAccount.feature:22
+    - - src/features/myAccount.feature:37
+    - - src/features/myAccount.feature:53
+    - - src/features/myAccount.feature:70
+    - - src/features/priceBeat.feature:9
+    - - src/features/priceBeat.feature:26
+    - - src/features/priceBeat.feature:44
+    - - src/features/priceBeat.feature:61
+    - - src/features/productDisplayPage.feature:9
+    - - src/features/productDisplayPage.feature:20
+    - - src/features/productDisplayPage.feature:33
+    - - src/features/productDisplayPage.feature:47
+    - - src/features/productDisplayPage.feature:58
+    - - src/features/productDisplayPage.feature:70
+    - - src/features/productDisplayPage.feature:83
+    - - src/features/productDisplayPage.feature:97
+    - - src/features/productDisplayPage.feature:111
+    - - src/features/productDisplayPage.feature:124
+    - - src/features/productDisplayPage.feature:138
+    - - src/features/productListingPage.feature:10
+    - - src/features/productListingPage.feature:26
+    - - src/features/productListingPageFacets.feature:8
+    - - src/features/productListingPageFacets.feature:57
+    - - src/features/productListingPageFacets.feature:72
+    - - src/features/productListingPageFacets.feature:88
+    - - src/features/productListingPageSortOptions.feature:8
+    - - src/features/productListingPageSortOptions.feature:25
+    - - src/features/productListingPageSortOptions.feature:43
+    - - src/features/productListingPageSortOptions.feature:61
+    - - src/features/productListingPageSortOptions.feature:76
+    - - src/features/productOverviewPDP.feature:9
+    - - src/features/productOverviewPDP.feature:25
+    - - src/features/productOverviewPDP.feature:37
+    - - src/features/productOverviewPDP.feature:51
+    - - src/features/productOverviewPDP.feature:68
+    - - src/features/productOverviewPDP.feature:85
+    - - src/features/reviewSectionPDP.feature:9
+    - - src/features/reviewSectionPDP.feature:22
+    - - src/features/reviewSectionPDP.feature:35
+    - - src/features/reviewSectionPDP.feature:51
+    - - src/features/reviewSectionPDP.feature:72
+    - - src/features/reviewSectionPDP.feature:87
+    - - src/features/search-product.feature:7
+    - - src/features/search-product.feature:18
+    - - src/features/search-product.feature:29
+    - - src/features/stickyMenuPDP.feature:9
+    - - src/features/stickyMenuPDP.feature:25
+    - - src/features/stickyMenuPDP.feature:45
+    - - src/features/storeAvailability.feature:9
+    - - src/features/storeAvailability.feature:25
+    - - src/features/storeAvailability.feature:46
+    - - src/features/storeLocator.feature:7
+    - - src/features/storeLocator.feature:33
+testRunnerCommand: npm run cucumber -- --profile dev $test
+globalTimeout: 90
+vars:
+    browser:
+        - MicrosoftEdge
+tunnelOpts:
+    testsPerTunnel: 10
+testSuiteTimeout: 90
+testSuiteStep: 90
+cacheDirectories:
+    - node_modules
+cacheKey: '{{ checksum "package-lock.json" }}'
+maxRetries: 1
+jobID: 7363d9d3-bb31-441d-8066-a1d803572a15
+uploadArtefacts:
+    - name: Executed-Job-Artifacts
+      path:
+        - reports/**
+      email:
+        to: []
+        metaInfo: []
+        linkValidity: 0
+uploadArtifacts:
+    - name: Executed-Job-Artifacts
+      path:
+        - reports/**
+      email:
+        to: []
+        metaInfo: []
+        linkValidity: 0
+codeDirectory: eComm-shopify-test-automation
+report: true
+partialReports:
+    - type: json
+      location: reports/
+      frameworkName: cucumber
+      email:
+        to: []
+        metaInfo: []
+        linkValidity: 0
+      configPath: ""
+      configPathURL: ""
+framework:
+    name: ""
+    flags: []
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    runnerFlags: []
+    workingDirectory: ""
+    isTestNGXMLSuite: false
+    defaultReports: false
+    args:
+        appPath: ""
+        testSuitePath: ""
+        xcTestPlanPath: ""
+        shards:
+            mappings: []
+        filters:
+            attributes: []
+        devices: []
+        deviceSelectionStrategy: ""
+        appId: ""
+        testSuiteAppId: ""
+        xcTestPlanId: ""
+        skipXMLOnRun: false
+        skipInstall: false
+        disableReleaseDevice: false
+        platformName: ""
+        isRealMobile: null
+        avoidAppLaunch: false
+        queueTimeout: 0
+        uninstallPreviousBuild: false
+        language: ""
+        locale: ""
+        preservedDevice: false
+        fixedIP: ""
+        resignApp: true
+        minorOsVersion: false
+        playwrightRD: false
+        mobileDC: null
+        skipUninstallPreviousBuild: false
+        isVirtualDevice: false
+        mitmProxy: false
+        networkHar: false
+        artifacts: false
+        otherApps: []
+    additional_args: null
+    licenseKey: ""
+    userdefinediscovery: false
+    toscaArgs: null
+    version: ""
+    downloadURL: ""
+    baseCommand: ""
+cypress: false
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+testType: playwright
+combineTasksInMatrixMode: false
+captureScreenRecordingForScenarios: false
+maxRetriesPreSteps: 0
+triggerMode: false
+sourcePayload:
+    verifySSL: true
+collectLocalGitData: true
+dynamicAllocation: false
+appium: false
+platformConfig: null
+differentialUpload:
+    enabled: false
+    ttlHours: null
+    forcedDisabled: false
+project:
+    id: ""
+    name: ""
+    type: default
+meta: {}
+alwaysRunPostSteps: false
+errorCategorizedOnFailureOnly: false
+testDiscoveryResultV3: []
+storageType: ""
+localHTTPProxy: ""
+regionConfig: []
+waitForArtefactsUpload: false
+unzipPayload: false
+projectpath: ""
+accessibilityJob: false
+slackChannel: ""

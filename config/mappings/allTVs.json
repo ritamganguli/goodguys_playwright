@@ -1,0 +1,4 @@
+{
+  "breadcrumb" : "[data-testid='breadcrumb']",
+  "television" : "//a[contains(@href,'televisions')]"
+}
