@@ -1,21 +1,27 @@
-name: Run Hyperexecute After PR Merge
+name: Run Hyperexecute After PR Merge, on Schedule, and Manual Trigger
 
 on:
   pull_request:
     types: [closed]
     branches:
       - main
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   run-hyperexecute:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Hyperexecute command
+      - name: Download Hyperexecute
         run: |
           curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
           chmod u+x hyperexecute
+
+      - name: Run Hyperexecute command
+        run: |
           ./hyperexecute --user shubhamr --key dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh --config $CONFIG --no-track
