@@ -39,6 +39,7 @@
 ---
 version: "0.1"
 globalTimeout: 90
+tunnel: true
 testSuiteTimeout: 90
 testSuiteStep: 90
 runson: win11
