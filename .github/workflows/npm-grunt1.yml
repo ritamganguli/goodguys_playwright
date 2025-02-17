@@ -1,0 +1,44 @@
+name: Run Hyperexecute After PR Merge, on Schedule, and Manual Trigger
+
+on:
+# Runs every day at midnight UTC
+  workflow_dispatch:  # Manual trigger with inputs
+    inputs:
+      branch:
+        description: 'Branch to trigger on'
+        required: true
+        default: 'main'
+      tags:
+        description: 'Tags for Hyperexecute'
+        required: true
+        default: 'latest'
+      concurrency:
+        description: 'Concurrency for Hyperexecute'
+        required: true
+        default: '4'
+      os:
+        description: 'OS to run Hyperexecute on'
+        required: true
+        default: 'ubuntu-latest'
+
+jobs:
+  run-hyperexecute:
+    runs-on: ${{ github.event.inputs.os }}  # OS specified by input
+    if: github.event.pull_request.merged == true || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download Hyperexecute
+        run: |
+          curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
+          chmod u+x hyperexecute
+
+      - name: Update hyper.yaml with input parameters
+        run: |
+          sed -i "s/concurrency: .*/concurrency: ${{ github.event.inputs.concurrency }}/" hyper.yaml
+          sed -i "s|specificTags: \[.*\]|specificTags: [\"${{ github.event.inputs.tags }}\"]|" hyper.yaml
+
+      - name: Run Hyperexecute command
+        run: |
+          ./hyperexecute --user shubhamr --key dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh --config hyper.yaml --branch ${{ github.event.inputs.branch }}
