@@ -17,12 +17,8 @@ cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
   - node_modules
 testDiscovery:
-  type: automatic
-  mode: dynamic
-  args:
-    featureFilePaths: src/features
-    frameWork: javascript
-    specificTags: ["@dev"]
+  mode: remote
+  command: echo @dev
 testRunnerCommand: npm run cucumber -- --profile dev $test ; node reports.js
 env:
   COMMON_CONFIG_FILE: env/common.env
